@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>net.datastructures</groupId>
+        <artifactId>learning-dsa-java</artifactId>
+        <version>6.0.0</version>
+    </parent>
+
+    <artifactId>chapter10-maps-hash-tables</artifactId>
+    <name>Chapter 10 — Maps, Hash Tables, and Skip Lists</name>
+    <description>Map ADT, hash tables (chaining, open addressing), hash functions, rehashing, skip lists, and Java's HashMap/HashSet.</description>
+</project>

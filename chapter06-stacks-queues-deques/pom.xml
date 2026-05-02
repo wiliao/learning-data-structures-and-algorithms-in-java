@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>net.datastructures</groupId>
+        <artifactId>learning-dsa-java</artifactId>
+        <version>6.0.0</version>
+    </parent>
+
+    <artifactId>chapter06-stacks-queues-deques</artifactId>
+    <name>Chapter 6 — Stacks, Queues, and Deques</name>
+    <description>Stack, Queue, and Deque ADTs with array and linked-list implementations; HTML tag matching; round-robin scheduling.</description>
+</project>

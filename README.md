@@ -2,7 +2,8 @@
 
 > 📚 A comprehensive guide to designing and analyzing efficient data structures using Java's object-oriented paradigm
 
-[![Java](https://img.shields.io/badge/Java-8+-orange.svg)](https://www.java.com)
+[![Java](https://img.shields.io/badge/Java-25-blue.svg)](https://www.java.com)
+[![Maven](https://img.shields.io/badge/Maven-3.9+-red.svg)](https://maven.apache.org/)
 [![License](https://img.shields.io/badge/License-Wiley-blue.svg)](https://www.wiley.com)
 [![Edition](https://img.shields.io/badge/Edition-6th-green.svg)](https://www.wiley.com/en-br/Data+Structures+and+Algorithms+in+Java%2C+6th+Edition-p-9781118771334)
 
@@ -49,22 +50,22 @@ The book adopts an **object-oriented paradigm** as the framework for data struct
 
 ### Chapter Highlights
 
-| Chapter | Key Topics |
-|---------|-----------|
-| **1-2** | Java fundamentals, OOP principles, inheritance, interfaces, exceptions, generics [[13]] |
-| **3** | Arrays, singly/doubly linked lists, circular lists, equivalence testing, cloning [[1]] |
-| **4** | Big-Oh notation, asymptotic analysis, seven fundamental functions [[1]] |
-| **5** | Linear/binary/multiple recursion, tail recursion elimination, file system traversal [[1]] |
-| **6** | Stack/Queue/Deque ADTs, array/linked implementations, HTML tag matching [[1]] |
-| **7** | List ADT, dynamic arrays, positional lists, iterators, Java Collections Framework [[1]] |
-| **8** | General/binary trees, traversals (preorder, inorder, postorder, BFS), expression trees [[1]] |
-| **9** | Priority queues, heaps, heap-sort, adaptable priority queues with locators [[1]] |
-| **10** | Maps, hash tables (chaining/probing), sorted maps, skip lists, sets/multisets [[1]] |
-| **11** | Binary search trees, AVL trees, splay trees, (2,4) trees, red-black trees [[1]] |
-| **12** | Merge-sort, quick-sort, lower bounds, bucket/radix sort, randomized quick-select [[1]] |
-| **13** | Pattern matching (Boyer-Moore, KMP), tries, Huffman coding, dynamic programming [[1]] |
-| **14** | Graph representations, DFS/BFS, transitive closure, shortest paths (Dijkstra), MSTs [[1]] |
-| **15** | JVM memory model, garbage collection, caching strategies, B-trees, external-memory algorithms [[1]] |
+| Chapter | Key Topics                                                                                          |
+| ------- | --------------------------------------------------------------------------------------------------- |
+| **1-2** | Java fundamentals, OOP principles, inheritance, interfaces, exceptions, generics [[13]]             |
+| **3**   | Arrays, singly/doubly linked lists, circular lists, equivalence testing, cloning [[1]]              |
+| **4**   | Big-Oh notation, asymptotic analysis, seven fundamental functions [[1]]                             |
+| **5**   | Linear/binary/multiple recursion, tail recursion elimination, file system traversal [[1]]           |
+| **6**   | Stack/Queue/Deque ADTs, array/linked implementations, HTML tag matching [[1]]                       |
+| **7**   | List ADT, dynamic arrays, positional lists, iterators, Java Collections Framework [[1]]             |
+| **8**   | General/binary trees, traversals (preorder, inorder, postorder, BFS), expression trees [[1]]        |
+| **9**   | Priority queues, heaps, heap-sort, adaptable priority queues with locators [[1]]                    |
+| **10**  | Maps, hash tables (chaining/probing), sorted maps, skip lists, sets/multisets [[1]]                 |
+| **11**  | Binary search trees, AVL trees, splay trees, (2,4) trees, red-black trees [[1]]                     |
+| **12**  | Merge-sort, quick-sort, lower bounds, bucket/radix sort, randomized quick-select [[1]]              |
+| **13**  | Pattern matching (Boyer-Moore, KMP), tries, Huffman coding, dynamic programming [[1]]               |
+| **14**  | Graph representations, DFS/BFS, transitive closure, shortest paths (Dijkstra), MSTs [[1]]           |
+| **15**  | JVM memory model, garbage collection, caching strategies, B-trees, external-memory algorithms [[1]] |
 
 ---
 
@@ -81,11 +82,56 @@ After studying this book, readers will be able to:
 
 ---
 
-## 🛠️ Code Organization
+## 🏗️ Maven Project Structure
 
-All Java code from the book is organized in the `net.datastructures` package, forming a coherent educational library complementary to the Java Collections Framework. [[2]]
+This repository is organized as a **multi-module Maven project** targeting **JDK 25**, with each book chapter as an independent module. All source code resides under the `net.datastructures` package, forming a coherent educational library complementary to the Java Collections Framework. [[2]]
+
+```
+learning-data-structures-and-algorithms-in-java/
+├── pom.xml                              # Parent POM (JDK 25, multi-module)
+├── README.md
+├── LICENSE
+├── docs/
+│   └── learning-roadmap.md
+│
+├── chapter01-java-primer/               # Java fundamentals
+├── chapter02-oop-design/                # OOP principles & generics
+├── chapter03-fundamental-ds/            # Arrays & linked lists
+├── chapter04-algorithm-analysis/        # Big-Oh & asymptotic analysis
+├── chapter05-recursion/                 # Recursive algorithms
+├── chapter06-stacks-queues-deques/      # Stack, Queue & Deque ADTs
+├── chapter07-list-iterator/             # Dynamic arrays & iterators
+├── chapter08-trees/                     # Binary trees & traversals
+├── chapter09-priority-queues/           # Heaps & heap-sort
+├── chapter10-maps-hash-tables/          # Hash tables & skip lists
+├── chapter11-search-trees/              # BST, AVL, red-black trees
+├── chapter12-sorting-selection/         # Merge-sort, quick-sort
+├── chapter13-text-processing/           # Pattern matching & tries
+├── chapter14-graph-algorithms/          # Graphs, DFS/BFS, shortest paths
+└── chapter15-memory-management-btrees/  # B-trees & garbage collection
+```
+
+### Build Commands
+
+```bash
+# Compile all modules
+mvn compile
+
+# Run tests for all modules
+mvn test
+
+# Package all modules into JARs
+mvn package
+
+# Clean all builds
+mvn clean
+
+# Build a single module
+mvn -pl chapter08-trees compile
+```
 
 ### Example: Using the Library
+
 ```java
 import net.datastructures.*;
 
@@ -96,7 +142,7 @@ public class Example {
         list.addLast(10);
         list.addLast(20);
         list.addFirst(5);
-        
+
         // Iterate using Java's for-each loop
         for (Integer value : list) {
             System.out.println(value);
@@ -121,12 +167,14 @@ public class Example {
 Available at: [www.wiley.com/college/goodrich](https://www.wiley.com/college/goodrich) [[2]]
 
 ### For Students
+
 - ✅ All Java source code from the book
 - ✅ Appendix of useful mathematical facts
 - ✅ PDF handouts of PowerPoint slides (4-per-page)
 - ✅ Study guide with exercise hints, indexed by problem number
 
 ### For Instructors
+
 - ✅ Solutions to hundreds of exercises
 - ✅ Color versions of all figures and illustrations
 - ✅ Editable PowerPoint and PDF slides (1-per-page)
@@ -137,32 +185,35 @@ Available at: [www.wiley.com/college/goodrich](https://www.wiley.com/college/goo
 
 This book aligns with the **IEEE/ACM 2013 Computing Curriculum**, covering knowledge units including: [[7]]
 
-| Knowledge Unit | Coverage |
-|---------------|----------|
-| AL/Basic Analysis | Chapter 4, Sections 5.2 & 12.1.4 |
-| AL/Algorithmic Strategies | Sections 5.3.3, 12.1.1, 13.2.1, 13.4.2, 14.6.2, 14.7 |
-| AL/Fundamental Data Structures | Chapters 3, 6, 9-12, 14 |
-| DS/Graphs and Trees | Chapters 8 & 14 |
-| PL/Object-Oriented Programming | Chapter 2, Sections 7.3, 9.5.1, 11.2.1 |
-| SDF/Fundamental Programming Concepts | Chapters 1 & 5 |
+| Knowledge Unit                       | Coverage                                             |
+| ------------------------------------ | ---------------------------------------------------- |
+| AL/Basic Analysis                    | Chapter 4, Sections 5.2 & 12.1.4                     |
+| AL/Algorithmic Strategies            | Sections 5.3.3, 12.1.1, 13.2.1, 13.4.2, 14.6.2, 14.7 |
+| AL/Fundamental Data Structures       | Chapters 3, 6, 9-12, 14                              |
+| DS/Graphs and Trees                  | Chapters 8 & 14                                      |
+| PL/Object-Oriented Programming       | Chapter 2, Sections 7.3, 9.5.1, 11.2.1               |
+| SDF/Fundamental Programming Concepts | Chapters 1 & 5                                       |
 
 ---
 
 ## 👥 About the Authors
 
 ### Michael T. Goodrich
+
 - Chancellor's Professor, UC Irvine
 - Ph.D., Purdue University (1987)
 - Fellow: AAAS, ACM, IEEE
 - Recipient: IEEE Computer Society Technical Achievement Award, ACM Recognition of Service Award [[8]]
 
 ### Roberto Tamassia
+
 - Plastech Professor & Chair, Brown University
 - Director, Center for Geometric Computing
 - Ph.D., UIUC (1988)
 - Fellow: AAAS, ACM, IEEE [[8]]
 
 ### Michael H. Goldwasser
+
 - Professor & Director of CS, Saint Louis University
 - Ph.D., Stanford University (1997)
 - Research: approximation algorithms, computational biology, CS education [[8]]
@@ -171,10 +222,10 @@ This book aligns with the **IEEE/ACM 2013 Computing Curriculum**, covering knowl
 
 ## 📦 Related Books by the Authors
 
-- *Data Structures and Algorithms in Python* (Wiley)
-- *Data Structures and Algorithms in C++* (Wiley)
-- *Algorithm Design: Foundations, Analysis, and Internet Examples* (Wiley)
-- *Introduction to Computer Security* (Addison-Wesley)
+- _Data Structures and Algorithms in Python_ (Wiley)
+- _Data Structures and Algorithms in C++_ (Wiley)
+- _Algorithm Design: Foundations, Analysis, and Internet Examples_ (Wiley)
+- _Introduction to Computer Security_ (Addison-Wesley)
 
 ---
 
@@ -207,5 +258,4 @@ This README is for educational reference purposes. The book content, code, and f
 
 > ⭐ **If you find this resource helpful, consider starring this repository and sharing it with fellow learners!**
 
-*Last updated: 2024 | Based on Data Structures and Algorithms in Java, 6th Edition*
-
+_Last updated: 2024 | Based on Data Structures and Algorithms in Java, 6th Edition_

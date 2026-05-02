@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>net.datastructures</groupId>
+        <artifactId>learning-dsa-java</artifactId>
+        <version>6.0.0</version>
+    </parent>
+
+    <artifactId>chapter15-memory-management-btrees</artifactId>
+    <name>Chapter 15 — Memory Management and B-Trees</name>
+    <description>JVM memory model, garbage collection, caching strategies, B-trees, and external-memory algorithms.</description>
+</project>
